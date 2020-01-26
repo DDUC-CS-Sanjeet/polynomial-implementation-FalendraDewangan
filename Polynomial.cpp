@@ -4,7 +4,7 @@ using namespace std;
 class Polynomial
 {
   private:
-	  	int a[100];
+	  	int  a[100];
   		int degree;		
   		
     // Variables to store information about polynomial
@@ -25,7 +25,6 @@ class Polynomial
   
     ~Polynomial()
     {
-    	cout<<"Destructor Invoke ";
       // Behavior of destructor
     }
     
@@ -95,12 +94,12 @@ int main()
   thirdPolynomial=firstPolynomial+secondPolynomial;
   Polynomial fourthPolynomial=firstPolynomial-secondPolynomial;
   
-  cout<<"your 1st polynomial is : ";
+  cout<<"\n your 1st polynomial is : ";
   firstPolynomial.display();
-  cout<<"your 2nd polynomial is : ";
+  cout<<"\n your 2nd polynomial is : ";
   secondPolynomial.display();
-  cout<<"polynomial after addition : ";
+  cout<<"\n polynomial after addition : ";
   thirdPolynomial.display();
-  cout<<"polynomial after subtraction : ";
+  cout<<"\n polynomial after subtraction : ";
   fourthPolynomial.display();
 }
