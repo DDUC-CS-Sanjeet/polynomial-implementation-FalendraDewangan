@@ -34,9 +34,14 @@ class Polynomial
     	Polynomial p;
 		p.degree= this->degree>=c.degree? this->degree:c.degree;    	
 		for(int i=0;i<p.degree;i++)
-    		p.a[i]=c.a[i]+this->a[i];
-    	
-    	return p;
+		{
+			if(i>=this->degree)
+				this->a[i]=0;
+			if(i>=c.degree)
+				c.a[i]=0;
+				p.a[i]=c.a[i]+this->a[i];
+		}
+		return p;
 	}
 
 	Polynomial operator -(Polynomial c)
@@ -44,7 +49,14 @@ class Polynomial
     	Polynomial p;
 		p.degree= this->degree>=c.degree? this->degree:c.degree;    	
 		for(int i=0;i<p.degree;i++)
-    		p.a[i]=this->a[i]-c.a[i];
+		{
+				if(i>=this->degree)
+				this->a[i]=0;
+				if(i>=c.degree)
+				c.a[i]=0;
+				p.a[i]=this->a[i]-c.a[i];
+		}
+    		
     	
     	return p;
 	}
